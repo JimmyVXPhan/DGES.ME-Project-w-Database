@@ -66,7 +66,7 @@
                 <li><a href="finishedCourses.php">Finished Courses</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="allCourses.php">Browse All Courses</a></li>
-              </ul>
+               </ul>
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
