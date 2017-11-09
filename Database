@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 08, 2017 at 11:58 PM
+-- Generation Time: Nov 09, 2017 at 12:30 AM
 -- Server version: 5.5.51-38.2
 -- PHP Version: 5.6.20
 
@@ -76,6 +76,27 @@ CREATE TABLE IF NOT EXISTS `Projects` (
   `prerequisites` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `user_id` int(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `schools`
+--
+
+CREATE TABLE IF NOT EXISTS `schools` (
+  `name` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `number_students` int(11) NOT NULL,
+  `phone` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `number_teachers` int(11) NOT NULL,
+  `category` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `main_language` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `specialization` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `street` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `city` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `state` varchar(256) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `country` varchar(256) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -163,7 +184,7 @@ CREATE TABLE IF NOT EXISTS `Video_Files` (
 -- Indexes for table `categories`
 --
 ALTER TABLE `categories`
-  ADD PRIMARY KEY (`cat_id`), ADD UNIQUE KEY `cat_name` (`cat_name`);
+  ADD PRIMARY KEY (`cat_id`), ADD UNIQUE KEY `cat_name` (`cat_name`), ADD UNIQUE KEY `cat_name_2` (`cat_name`);
 
 --
 -- Indexes for table `chat`
