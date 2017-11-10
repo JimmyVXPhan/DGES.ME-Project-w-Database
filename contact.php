@@ -9,7 +9,7 @@
     <style>
       .form-area
       {
-      	padding: 0px 40px 60px;
+      	padding: auto 40px 60px;
       	margin: 0px 75px 60px;
       	}
         .center {

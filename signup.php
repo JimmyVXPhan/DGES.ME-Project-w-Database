@@ -41,7 +41,7 @@
             </div>
 
             <div class="control-group">
-              <label class="control-label" for="firstname">First Name</label>
+              <label class="control-label" for="first">First Name</label>
               <div class="controls">
                 <input type="text" id="first" name="first" placeholder="" class="form-control input-lg">
                 <p class="help-block">Please provide your name</p>
@@ -55,27 +55,58 @@
                 <p class="help-block">Please provide your last name</p>
               </div>
             </div>
+            <div class="control-group">
+	      <label class="control-label" for="phone">Phone</label>
+	      <div class="controls">
+		<input type="text" id="phone" name="phone" placeholder="" class="form-control input-lg">
+		<p class="help-block">Please provide your phone number</p>
+	     </div>
+	    </div>   
 
             <div class="control-group">
-              <label class="control-label" for="email">E-mail</label>
+              <label class="control-label" for="email">Email</label>
               <div class="controls">
-                <input type="email" id="email" name="email" placeholder="" class="form-control input-lg">
-                <p class="help-block">Please provide your E-mail</p>
+                <input type="text" id="email" name="email" placeholder="" class="form-control input-lg">
+                <p class="help-block">Please provide your Email</p>
+              </div>
+            </div>
+            
+             <div class="control-group">
+	      <label class="control-label" for="street_address">Street Address</label>
+	      <div class="controls">
+		<input type="text" id="street_address" name="street_address" placeholder="" class="form-control input-lg">
+		<p class="help-block">Please provide your street address</p>
+	     </div>
+	    </div>
+	    
+	     <div class="control-group">
+	      <label class="control-label" for="city">City</label>
+	      <div class="controls">
+		<input type="text" id="city" name="city" placeholder="" class="form-control input-lg">
+		<p class="help-block">Please provide your city</p>
+	     </div>
+	    </div>   
+
+            <div class="control-group">
+              <label class="control-label" for="state">State</label>
+              <div class="controls">
+                <input type="text" id="state" name="state" placeholder="" class="form-control input-lg">
+                <p class="help-block">Please provide your state</p>
               </div>
             </div>
 
             <div class="control-group">
               <label class="control-label" for="username">Username</label>
               <div class="controls">
-                <input type="text" id="username" name="uid" placeholder="" class="form-control input-lg">
+                <input type="text" id="username" name="username" placeholder="" class="form-control input-lg">
                 <p class="help-block">Username can contain any letters or numbers, without spaces</p>
               </div>
             </div>
 
             <div class="control-group">
-              <label class="control-label" for="pwd">Password</label>
+              <label class="control-label" for="password">Password</label>
               <div class="controls">
-                <input type="password" id="password" name="pwd" placeholder="" class="form-control input-lg">
+                <input type="password" id="password" name="password" placeholder="" class="form-control input-lg">
                 <p class="help-block">Password should be at least 6 characters</p>
               </div>
             </div>
@@ -118,7 +149,7 @@
         if (success.test(window.location.href)) {
             $('#success').show()
 						setTimeout(function() {
-							window.location.href = 'mainPage.php';
+							window.location.href = 'index.php';
 						}, 1500);
         }
 
