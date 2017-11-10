@@ -29,11 +29,7 @@
       <p class="font_8"><span class="color_26">Unfortunately, I can't do this independently. I need support to drive this effort, to recruit people from all over the world to create curriculum and content that will support the idea of innovative, gamified, project-based learning. I need to hire developers to develop a platform that will reach kids even in rural communities. I will need to invest in technology to give access to students in rural economies to the educational platform and latest content. I will leverage my expertise from Consulting and my passion for this project to influence the direction of this project, to bring people with a similar mindset together and drive the change. For those interested to participate, please contact me at <span style="text-decoration:underline;"><a href="mailto:support@dges.me" target="_self" data-content="support@dges.me" data-type="mail">support@dges.me</a></span>. Help me lead this change and influence the lives of hundreds of thousands of children, who will in turn make their mark on the global economy.&nbsp;</span></p>
     </div>
     </div>
-<<<<<<< HEAD
   </div>
-=======
-  </div> 
->>>>>>> a812b07e13db468cbb95e9d5fac8cab51066f4b8
 
 </body>
 </html>
