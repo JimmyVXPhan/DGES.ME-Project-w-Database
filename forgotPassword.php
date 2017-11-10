@@ -4,11 +4,7 @@
 ?>
 
 <title>
-
-
- </title>
-
-
+</title>
 <body>
 
 <br>
@@ -28,7 +24,5 @@
     </form>
   </div>
 </body>
-
-
 
 </html>
