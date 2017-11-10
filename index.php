@@ -26,12 +26,12 @@
 echo "
   <script type=\"text/javascript\">
 
-    var error = /mainPage\.php\?login\=error/;
+    var error = /index\.php\?login\=error/;
 
     if (error.test(window.location.href)) {
         $('#error').show()
         setTimeout(function() {
-          window.location.href = 'mainPage.php';
+          window.location.href = 'index.php';
         }, 3000);
     }</script>";
       ?>
