@@ -6,13 +6,17 @@ if (isset($_POST['submit'])) {
 
 	$first = mysqli_real_escape_string($conn, $_POST['first']);
 	$last = mysqli_real_escape_string($conn, $_POST['last']);
+	$phone = mysqli_real_escape_string($conn, $_POST['phone']);
 	$email = mysqli_real_escape_string($conn, $_POST['email']);
-	$uid = mysqli_real_escape_string($conn, $_POST['uid']);
-	$pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
+	$street_address = mysqli_real_escape_string($conn, $_POST['street_address']);
+	$city = mysqli_real_escape_string($conn, $_POST['city']);
+	$state = mysqli_real_escape_string($conn, $_POST['state']);
+	$username = mysqli_real_escape_string($conn, $_POST['username']);
+	$password = mysqli_real_escape_string($conn, $_POST['password']);
 
 	//Error handlers
 	//Check for empty fields
-	if (empty($first) || empty($last) || empty($email) || empty($uid) || empty($pwd)) {
+	if (empty($first) || empty($last) || empty($phone) || empty($email) || empty($street_address) || empty($city) || empty($state) || empty($username) || empty($password)) {
 		header("Location: ../signup.php?signup=empty");
 		exit();
 
@@ -27,7 +31,7 @@ if (isset($_POST['submit'])) {
 				header("Location: ../signup.php?signup=email");
 				exit();
 			} else {
-				$sql = "SELECT * FROM users WHERE user_uid='$uid'";
+				$sql = "SELECT * FROM users WHERE user_username='$username'";
 				$result = mysqli_query($conn, $sql);
 				$resultCheck = mysqli_num_rows($result);
 
@@ -36,9 +40,9 @@ if (isset($_POST['submit'])) {
 					exit();
 				} else {
 					//Hashing the password
-					$hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
+					$hashedpassword = password_hash($password, PASSWORD_DEFAULT);
 					//Insert the user into the database
-					$sql = "INSERT INTO users (user_first, user_last, user_email, user_uid, user_pwd) VALUES ('$first', '$last', '$email', '$uid', '$hashedPwd');";
+					$sql = "INSERT INTO users (user_first, user_last, user_phone, user_email, user_street_address, user_city, user_state, user_username, user_password) VALUES ('$first', '$last', '$phone', '$email', '$street_address', '$city', '$state', '$username', '$hashedpassword');";
 					mysqli_query($conn, $sql);
 					header("Location: ../signup.php?signup=success");
 					exit();
