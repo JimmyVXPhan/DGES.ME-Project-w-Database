@@ -8,4 +8,4 @@
   <br>
   <br>
   <div class="container">
-  <h2>Current Courses</h2>
+  <h2>Current Courses</h2> 
