@@ -35,7 +35,7 @@
                 var ch = max - len;
                 $('#characterLeft').text(ch + ' characters left');
                 $('#btnSubmit').removeClass('disabled');
-                $('#characterLeft').removeClass('red');
+                $('#characterLeft').removeClass('red'); 
             }
         });
     });
