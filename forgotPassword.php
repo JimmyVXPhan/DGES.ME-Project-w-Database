@@ -6,7 +6,7 @@
 if(isset($_POST['submit'])){
     $to = $_POST['email']; // this is the user's Email address
     $subject = "Reset Password";
-    $message = " A request has been made to reset your password. Please follow the link to reset: http://sonyfortune.com/resetPassword.php";
+    $message = " A request has been made to reset your password. Please follow the link to reset: http://dgesme.com/resetPassword.php";
     $headers = "From:" . $to;
     
     mail($to,$subject,$message,$headers);
