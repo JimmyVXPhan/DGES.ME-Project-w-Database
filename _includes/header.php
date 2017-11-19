@@ -57,17 +57,20 @@
           <ul class="nav navbar-nav">
 
             <li><a href="index.php">Home</a></li>
-            <li><a href="about.php">About</a></li>
-            <li><a href="contact.php">Contact</a></li>
+            <li><a href="allCourses.php">Browse All Courses</a></li>
+            
+            
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Student Portal<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="currentCourses.php">Current Courses</a></li>
                 <li><a href="finishedCourses.php">Finished Courses</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="allCourses.php">Browse All Courses</a></li>
+                
               </ul>
             </li>
+            <li><a href="contact.php">Contact Us</a></li>
+            <li><a href="about.php">About</a></li>
+
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <?php
