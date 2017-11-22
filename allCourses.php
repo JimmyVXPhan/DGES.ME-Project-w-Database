@@ -1,10 +1,14 @@
 <?php
-        include '_includes/header.php';
-        $dsn = 'mysql:host=localhost;dbname=dges';
-        $username = 'root';
-        $password = '';
+include '_includes/header.php';
+?>
 
-        try{
+<?php
+
+      $dsn = 'mysql:host=localhost;dbname=dges';
+      $username = 'root';
+      $password = '';
+
+       try{
 
           $con = new PDO($dsn, $username, $password);
             $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -16,7 +20,7 @@
 
         $tableContent = '';
         $start = '';
-        $selectStmt = $con->prepare('SELECT * FROM projects');
+        $selectStmt = $con->prepare('SELECT * FROM Projects');
         $selectStmt->execute();
         $projects = $selectStmt->fetchAll();
 
@@ -38,7 +42,7 @@
         $selectStmt = $con->prepare('SELECT * FROM projects WHERE project_skills like :start and project_difficulty like :difficulty and project_prerequisite like :prerequisite');
         $selectStmt->execute(array(
 
-                 ':start'=>'%'.$start.'%','difficulty'=>'%'.$difficulty.'%',':prerequisite'=>'%'.$prerequisite.'%'
+                  ':start'=>'%'.$start.'%','difficulty'=>'%'.$difficulty.'%',':prerequisite'=>'%'.$prerequisite.'%'
 
         ));
         $projects = $selectStmt->fetchAll();
@@ -91,12 +95,12 @@
             </head>
             <body>
 
-                <form action="searchPT2.php" method="POST">
+                <form action="allCourses.php" method="POST">
                     <!--
         The Table Will Be Populated With All Data
        When An Option From The Select Options Is Selected And The Filter Button Is Clicked, The Table Will Be Populated With Specific Data
                      -->
-                    <select name="start"style="margin-left:75px;">
+                    <select name="start" style="margin-left:75px;">
 
                         <option value=""<?php if($start == ''){echo 'selected';}?>>Skills...</option>
                         <option value="Marketing" <?php if($start == 'Marketing'){echo 'selected';}?>>Marketing</option>
