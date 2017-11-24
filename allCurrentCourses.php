@@ -67,13 +67,14 @@
           die("Connection failed: " . $conn->connect_error);
         }
 
-        $sql = "SELECT project_name FROM Projects";
+        $sql = "SELECT project_name, project_location FROM projects";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
           // output data of each row
           while($row = $result->fetch_assoc()) {
-            echo "<br> id: ". $row["id"]. " - Name: ". $row["firstname"]. " " . $row["lastname"] . "<br>";
+            //echo '<a href="test">'.$row['project_name'].'</a><br>';
+            echo '<a href="'.$row['project_location'].'">'.$row['project_name'].'</a><br>';
           }
         } else {
           echo "0 results";
@@ -82,8 +83,6 @@
         $conn->close();
         ?>
 
-        <p><a href="#">Link</a></p>
-        <p><a href="#">Link</a></p>
         <p><a href="#">Link</a></p>
 
       </div>
